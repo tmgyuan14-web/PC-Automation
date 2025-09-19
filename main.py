@@ -8,7 +8,7 @@ import time
 def Auto_Brain(cmd):
     for phrase, func in command_phrases.items():
         similarity = fuzz.ratio(cmd.lower(), phrase.lower())
-        if similarity >= 85:  # Match threshold
+        if similarity >= 75:  # Match threshold
             func()  # Call the associated function
             return  # Exit the function once a match is found
     print("Command not recognized")
